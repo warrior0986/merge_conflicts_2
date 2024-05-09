@@ -27,13 +27,23 @@
             if (operator === "+") {
                 var result = sum(parseFloat(operand1), parseFloat(operand2));
             }
-            resultText.innerHTML = result;
-        }
 
-        function sum(a, b) {
-            var result = a + b;
-            return result;
+            if (operator === '-') {
+                var result = subtract(operand1, operand2);
+            }
+            resultText.innerHTML = result;
+
         }
+        function sum(a, b) {
+                var result = a + b;
+                return result;
+            }
+
+        function subtract(operand1, operand2) {
+                var result = operand1 - operand2;
+
+                return result;
+            }
     </script>
 </body>
 
