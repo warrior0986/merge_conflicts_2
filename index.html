@@ -22,8 +22,20 @@
             var operand1 = document.getElementById("operand1").value;
             var operand2 = document.getElementById("operand2").value;
             var operator = document.getElementById("operator").value;
-            var result = document.getElementById("result");
+            var resultText = document.getElementById("result");
 
+            if (operator === '-') {
+                var result = subtract(operand1, operand2);
+            }
+
+            resultText.innerText = result;
+
+        }
+
+        function subtract(operand1, operand2) {
+            var result = operand1 - operand2;
+
+            return result;
         }
     </script>
 </body>
